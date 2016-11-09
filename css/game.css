@@ -1,0 +1,1135 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, 'Hiragino Sans GB', md-hsgb, 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    /*height: 100%;*/
+    width: 100%;
+    overflow: hidden;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.bg-img {
+    background-image: url(../img/background.png);
+}
+
+.bg-img1 {
+    background-image: url(../img/pin.jpg);
+}
+
+.bg-img2 {
+    background-image: url(../img/pin2.jpg);
+}
+
+.container {
+    height: 100%;
+}
+
+.title-block {
+    color: #ffffff;
+}
+
+.glance-button-block {
+    margin: 0 15px;
+}
+
+.main-wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+}
+
+.ad-block {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+}
+
+.ad-img {
+    height: 100%;
+}
+
+.main-block {
+    position: relative;
+    background-image: url(../img/paper.png);
+    margin: 15px;
+    margin-top: 5px;
+    box-shadow: 3px 3px 3px rgba(23, 23, 23, 0.3) inset;
+    overflow: hidden;
+    border: 3px solid #202D3E;
+}
+
+.victory-block {
+    margin: 15px;
+    border: 3px solid #202D3E;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+}
+
+.puzzle-img {
+    /*background-image: url(../img/puzzle2.jpg);*/
+    background-repeat: no-repeat;
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 3px 3px 3px rgba(23, 23, 23, 0.3);
+}
+
+.glance-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.time-badge-block {
+    margin: 5px 15px;
+}
+
+.time-badge {
+    display: inline-block;
+    min-width: 80;
+    padding: 5px 8px;
+    margin: 0 10;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFEB5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #716157;
+    border-radius: 18px;
+}
+
+.debug-badge {
+    display: inline-block;
+    margin: 0 10;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFEB5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #716157;
+}
+
+.popover-content {
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+/*.popover .arrow{
+	display: none;
+}*/
+
+
+/*.victory-modal .modal-dialog .modal-content{
+	background-color: #F8F7B0;
+	color: #685950;
+}
+.victory-modal .modal-dialog .modal-content .modal-header{
+	border-bottom-color: #685950;
+}
+.victory-modal .modal-dialog .modal-content .modal-footer{
+	border-top-color: #685950;
+}*/
+
+.share-cover {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.help-cover {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    -moz-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -moz-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        -moz-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        -moz-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.moveDown {
+    -webkit-animation-name: moveDown;
+    -moz-animation-name: moveDown;
+    animation-name: moveDown;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+
+.moveUp {
+    -webkit-animation-name: moveUp;
+    -moz-animation-name: moveUp;
+    animation-name: moveUp;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+.moveLeft {
+    -webkit-animation-name: moveLeft;
+    -moz-animation-name: moveLeft;
+    animation-name: moveLeft;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes moveLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.moveRight {
+    -webkit-animation-name: moveRight;
+    -moz-animation-name: moveRight;
+    animation-name: moveRight;
+    -webkit-animation-duration: 0.2s;
+    -moz-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes moveRight {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+.pieces-3-1 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 0 0;
+}
+
+.pieces-3-2 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 50% 0;
+}
+
+.pieces-3-3 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 100% 0;
+}
+
+.pieces-3-4 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 0 50%;
+}
+
+.pieces-3-5 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 50% 50%;
+}
+
+.pieces-3-6 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 100% 50%;
+}
+
+.pieces-3-7 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 0 100%;
+}
+
+.pieces-3-8 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 50% 100%;
+}
+
+.pieces-3-9 {
+    width: 33.33%;
+    height: 33.33%;
+    background-size: 300%;
+    background-position: 100% 100%;
+}
+
+.pieces-4-1 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 0 0;
+}
+
+.pieces-4-2 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 33.33% 0;
+}
+
+.pieces-4-3 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 66.66% 0;
+}
+
+.pieces-4-4 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 100% 0;
+}
+
+.pieces-4-5 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 0 33.33%;
+}
+
+.pieces-4-6 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 33.33% 33.33%;
+}
+
+.pieces-4-7 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 66.66% 33.33%;
+}
+
+.pieces-4-8 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 100% 33.33%;
+}
+
+.pieces-4-9 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 0 66.66%;
+}
+
+.pieces-4-10 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 33.33% 66.66%;
+}
+
+.pieces-4-11 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 66.66% 66.66%;
+}
+
+.pieces-4-12 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 100% 66.66%;
+}
+
+.pieces-4-13 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 0 100%;
+}
+
+.pieces-4-14 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 33.33% 100%;
+}
+
+.pieces-4-15 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 66.66% 100%;
+}
+
+.pieces-4-16 {
+    width: 25%;
+    height: 25%;
+    background-size: 400%;
+    background-position: 100% 100%;
+}
+
+.pieces-5-1 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 0 0;
+}
+
+.pieces-5-2 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 25% 0;
+}
+
+.pieces-5-3 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 50% 0;
+}
+
+.pieces-5-4 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 75% 0;
+}
+
+.pieces-5-5 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 100% 0;
+}
+
+.pieces-5-6 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 0 25%;
+}
+
+.pieces-5-7 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 25% 25%;
+}
+
+.pieces-5-8 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 50% 25%;
+}
+
+.pieces-5-9 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 75% 25%;
+}
+
+.pieces-5-10 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 100% 25%;
+}
+
+.pieces-5-11 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 0 50%;
+}
+
+.pieces-5-12 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 25% 50%;
+}
+
+.pieces-5-13 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 50% 50%;
+}
+
+.pieces-5-14 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 75% 50%;
+}
+
+.pieces-5-15 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 100% 50%;
+}
+
+.pieces-5-16 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 0 75%;
+}
+
+.pieces-5-17 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 25% 75%;
+}
+
+.pieces-5-18 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 50% 75%;
+}
+
+.pieces-5-19 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 75% 75%;
+}
+
+.pieces-5-20 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 100% 75%;
+}
+
+.pieces-5-21 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 0 100%;
+}
+
+.pieces-5-22 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 25% 100%;
+}
+
+.pieces-5-23 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 50% 100%;
+}
+
+.pieces-5-24 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 75% 100%;
+}
+
+.pieces-5-25 {
+    width: 20%;
+    height: 20%;
+    background-size: 500%;
+    background-position: 100% 100%;
+}
+
+
+/* 与图片位置相关的CSS */
+
+.position-3-1 {
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.position-3-2 {
+    left: 33.33%;
+    top: 0;
+    z-index: 2;
+}
+
+.position-3-3 {
+    left: 66.66%;
+    top: 0;
+    z-index: 3;
+}
+
+.position-3-4 {
+    left: 0;
+    top: 33.33%;
+    z-index: 4;
+}
+
+.position-3-5 {
+    left: 33.33%;
+    top: 33.33%;
+    z-index: 5;
+}
+
+.position-3-6 {
+    left: 66.66%;
+    top: 33.33%;
+    z-index: 6;
+}
+
+.position-3-7 {
+    left: 0;
+    top: 66.66%;
+    z-index: 7;
+}
+
+.position-3-8 {
+    left: 33.33%;
+    top: 66.66%;
+    z-index: 8;
+}
+
+.position-3-9 {
+    left: 66.66%;
+    top: 66.66%;
+    z-index: 9;
+}
+
+.position-4-1 {
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.position-4-2 {
+    left: 25%;
+    top: 0;
+    z-index: 2;
+}
+
+.position-4-3 {
+    left: 50%;
+    top: 0;
+    z-index: 3;
+}
+
+.position-4-4 {
+    left: 75%;
+    top: 0;
+    z-index: 4;
+}
+
+.position-4-5 {
+    left: 0;
+    top: 25%;
+    z-index: 5;
+}
+
+.position-4-6 {
+    left: 25%;
+    top: 25%;
+    z-index: 6;
+}
+
+.position-4-7 {
+    left: 50%;
+    top: 25%;
+    z-index: 7;
+}
+
+.position-4-8 {
+    left: 75%;
+    top: 25%;
+    z-index: 8;
+}
+
+.position-4-9 {
+    left: 0;
+    top: 50%;
+    z-index: 9;
+}
+
+.position-4-10 {
+    left: 25%;
+    top: 50%;
+    z-index: 10;
+}
+
+.position-4-11 {
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+}
+
+.position-4-12 {
+    left: 75%;
+    top: 50%;
+    z-index: 12;
+}
+
+.position-4-13 {
+    left: 0;
+    top: 75%;
+    z-index: 13;
+}
+
+.position-4-14 {
+    left: 25%;
+    top: 75%;
+    z-index: 14;
+}
+
+.position-4-15 {
+    left: 50%;
+    top: 75%;
+    z-index: 15;
+}
+
+.position-4-16 {
+    left: 75%;
+    top: 75%;
+    z-index: 16;
+}
+
+.position-5-1 {
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.position-5-2 {
+    left: 20%;
+    top: 0;
+    z-index: 2;
+}
+
+.position-5-3 {
+    left: 40%;
+    top: 0;
+    z-index: 3;
+}
+
+.position-5-4 {
+    left: 60%;
+    top: 0;
+    z-index: 4;
+}
+
+.position-5-5 {
+    left: 80%;
+    top: 0;
+    z-index: 5;
+}
+
+.position-5-6 {
+    left: 0;
+    top: 20%;
+    z-index: 6;
+}
+
+.position-5-7 {
+    left: 20%;
+    top: 20%;
+    z-index: 7;
+}
+
+.position-5-8 {
+    left: 40%;
+    top: 20%;
+    z-index: 8;
+}
+
+.position-5-9 {
+    left: 60%;
+    top: 20%;
+    z-index: 9;
+}
+
+.position-5-10 {
+    left: 80%;
+    top: 20%;
+    z-index: 10;
+}
+
+.position-5-11 {
+    left: 0;
+    top: 40%;
+    z-index: 11;
+}
+
+.position-5-12 {
+    left: 20%;
+    top: 40%;
+    z-index: 12;
+}
+
+.position-5-13 {
+    left: 40%;
+    top: 40%;
+    z-index: 13;
+}
+
+.position-5-14 {
+    left: 60%;
+    top: 40%;
+    z-index: 14;
+}
+
+.position-5-15 {
+    left: 80%;
+    top: 40%;
+    z-index: 15;
+}
+
+.position-5-16 {
+    left: 0;
+    top: 60%;
+    z-index: 16;
+}
+
+.position-5-17 {
+    left: 20%;
+    top: 60%;
+    z-index: 17;
+}
+
+.position-5-18 {
+    left: 40%;
+    top: 60%;
+    z-index: 18;
+}
+
+.position-5-19 {
+    left: 60%;
+    top: 60%;
+    z-index: 19;
+}
+
+.position-5-20 {
+    left: 80%;
+    top: 60%;
+    z-index: 20;
+}
+
+.position-5-21 {
+    left: 0;
+    top: 80%;
+    z-index: 21;
+}
+
+.position-5-22 {
+    left: 20%;
+    top: 80%;
+    z-index: 22;
+}
+
+.position-5-23 {
+    left: 40%;
+    top: 80%;
+    z-index: 23;
+}
+
+.position-5-24 {
+    left: 60%;
+    top: 80%;
+    z-index: 24;
+}
+
+.position-5-25 {
+    left: 80%;
+    top: 80%;
+    z-index: 25;
+}
+
+.btn-glance {
+    color: #FFFEB5;
+    background-color: #716157;
+    border-color: #FFF0A1;
+}
+
+.btn-glance:active, .btn-glance.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.btn-glance:hover, .btn-glance:focus, .btn-glance.focus {
+    color: #FFFEB5;
+    text-decoration: none;
+}
+
+.victory-top {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.victory-bottom {
+    display: block;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.img-final {
+    position: relative;
+}
+
+.easy {}
+
+.hard {}
+
+.main {}

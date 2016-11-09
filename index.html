@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>蛮拼的</title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+
+<body wl-anchor="bg_img" class="bg-img2">
+	<div id="game_page" class="container">
+		<div class="title-block"> </div>
+		<div class="main-wrapper">
+			<div class="time-badge-block"> <span class="time-badge">00:00</span> </div>
+			<div class="glance-button-block text-right">
+				<button id="button_help" type="button" class="btn btn-glance"><span class="glyphicon glyphicon-question-sign"></span></button>
+				<button id="button_glance" type="button" class="btn btn-glance" data-toggle="popover"><span class="glyphicon glyphicon-eye-open"></span></button>
+			</div>
+			<div id="game_box" class="main-block"> </div>
+			<div id="victory-block" class="victory-block hide">
+				<p class="victory-top"></p>
+				<p class="victory-bottom"></p>
+			</div>
+		</div>
+		<div wl-anchor="victory_bottom" style="display: none;">
+			<p id="victory_bottom" style="display: none ;">恭喜！</p>
+		</div>
+	</div>
+	<!-- /.container -->
+	<div class="help-cover hide"> <img src="img/help/puzzle-help.png" class="img-responsive"> </div>
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js"></script>
+	<script src="//cdn.bootcss.com/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/puzzleList.js"></script>
+	<script type="text/javascript">
+		game.level = 3;
+		game.gameimg = 'img/puzzle.jpg';
+		game.initGame(getList(3));
+		game.text = '你完成了游戏！';
+
+
+		var hammertime = new Hammer(document.getElementById('game_box'));
+		hammertime.add(new Hammer.Pan({
+			direction: Hammer.DIRECTION_ALL,
+			threshold: 0
+		}));
+		hammertime.on('panleft', function(ev) {
+			game.moveLeft();
+		});
+		hammertime.on('panright', function(ev) {
+			game.moveRight();
+		});
+		hammertime.on('panup', function(ev) {
+			game.moveUp();
+		});
+		hammertime.on('pandown', function(ev) {
+			game.moveDown();
+		});
+
+		function getList(level) {
+			var id = Math.round(Math.random() * 98);
+			if (level == 3) {
+				return puzzleList3[id];
+			} else if (level == 4) {
+				return puzzleList4[id];
+			} else if (level == 5) {
+				return puzzleList5[id];
+			}
+		}
+		function resetGame(){
+			game.movelock = true;
+			game.currentTime = -1;
+			game.moveCounter = 0;
+			game.debug = false;
+			game.timeCounter = '';
+			$("#victory-block img").remove();
+			$("#game_box").html("");
+			$(".victory-block").addClass("hide").removeClass("fadeIn");
+			$("#button_glance").popover('destroy');
+			game.initGame(getList(3));
+		}
+		$("#button_help").click(function() {
+			$(".help-cover").removeClass("hide");
+		});
+		$("#victory-block").click(function() {
+			resetGame();
+		});
+
+	</script>
+</body>
+</html>
